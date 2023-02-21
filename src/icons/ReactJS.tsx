@@ -1,12 +1,12 @@
 import React from 'react';
 import { IconProps } from '../types/Icons';
 
-export function ReactJS({ height = 100, width = 100 }: IconProps) {
+export function ReactJS({ height, width, size }: IconProps) {
 	return (
 		<svg
 			viewBox="0 0 128 128"
-			height={height}
-			width={width}
+			height={height || size}
+			width={width || size}
 			aria-label="ReactJS"
 			role="img"
 		>

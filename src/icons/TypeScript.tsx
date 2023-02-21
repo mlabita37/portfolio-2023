@@ -1,9 +1,14 @@
 import React from 'react';
 import { IconProps } from '../types/Icons';
 
-export function TypeScript({ height = 100, width = 100 }: IconProps) {
+export function TypeScript({ height, width, size }: IconProps) {
 	return (
-		<svg viewBox="0 0 128 128" height={height} width={width}>
+		<svg
+			viewBox="0 0 128 128"
+			height={height || size}
+			width={width || size}
+			aria-label="TypeScript"
+		>
 			<title>TypeScript</title>
 			<path fill="#fff" d="M22.67 47h99.67v73.67H22.67z"></path>
 			<path

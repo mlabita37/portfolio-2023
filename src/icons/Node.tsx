@@ -1,9 +1,14 @@
 import React from 'react';
 import { IconProps } from '../types/Icons';
 
-export function Node({ height = 100, width = 100 }: IconProps) {
+export function Node({ height, width, size }: IconProps) {
 	return (
-		<svg viewBox="0 0 128 128" height={height} width={width}>
+		<svg
+			viewBox="0 0 128 128"
+			height={height || size}
+			width={width || size}
+			aria-label="Node"
+		>
 			<title>Node</title>
 			<path
 				fill="#83CD29"

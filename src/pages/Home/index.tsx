@@ -1,9 +1,7 @@
-import React from 'react';
+import React, { JSXElementConstructor, ReactElement } from 'react';
 import { Flex, Heading, Text } from 'rebass';
 import { NavBar } from '../../components/NavBar';
-import { ReactJS, TypeScript, Node, Next } from '../../icons';
-
-export interface Props {}
+import { IconsList } from '../../components/IconsList';
 
 const styles = {
 	body: {
@@ -16,6 +14,7 @@ const styles = {
 		flexDirection: 'column',
 		justifyContent: 'center',
 		alignItems: 'center',
+		margin: '100px 0',
 	},
 	heading: {
 		mb: '20px',
@@ -37,12 +36,8 @@ export function Home() {
 				<Heading as="h1" sx={styles.heading}>
 					Skills
 				</Heading>
-				<Flex sx={styles.icons}>
-					<ReactJS height="50px" width={'50px'} />
-					<TypeScript height="50px" width="50px" />
-					<Node height="50px" width="50px" />
-					<Next height="50px" width="50px" />
-				</Flex>
+				<IconsList />
+				<Flex sx={styles.icons}></Flex>
 			</Flex>
 		</Flex>
 	);
